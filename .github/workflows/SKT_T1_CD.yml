@@ -25,7 +25,9 @@ jobs:
           java-version: '17'
 
       - name: mkdir resources folder
-        run: touch ./src/main/resources/application.yml
+        run: |
+          mkdir ./src/main/resources
+          touch ./src/main/resources/application.yml
         shell: bash
 
       - name: copy yaml file
