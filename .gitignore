@@ -164,6 +164,7 @@ gradle-app.setting
 
 ### Config ###
 application.properties
+application.yml
 
 ### Test ###
 /src/test/
