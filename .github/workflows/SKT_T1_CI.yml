@@ -30,6 +30,7 @@ jobs:
       - name: Copy application-local.yml
         run: |
           # application.yml 생성
+          mkdir src/main/resources
           touch ./src/main/resources/application.yml
           
           # application.yml 파일 값 입력
