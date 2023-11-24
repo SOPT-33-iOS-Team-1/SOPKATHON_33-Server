@@ -27,10 +27,10 @@ jobs:
           distribution: 'corretto'
 
       # 3) 환경변수 파일 생성
-      - name: Copy application-local.yml
+      - name: Copy application.yml
         run: |
           # application.yml 생성
-          mkdir src/main/resources
+          mkdir ./src/main/resources
           touch ./src/main/resources/application.yml
           
           # application.yml 파일 값 입력
