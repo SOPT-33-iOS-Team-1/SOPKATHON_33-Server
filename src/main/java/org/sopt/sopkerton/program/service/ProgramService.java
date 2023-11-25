@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.sopt.sopkerton.program.domain.Program;
+import org.sopt.sopkerton.program.domain.Status;
 import org.sopt.sopkerton.program.dto.response.ProgramListResponse;
 import org.sopt.sopkerton.program.infrastructure.ProgramRepository;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,22 @@ public class ProgramService {
 
     public List<ProgramListResponse> getProgramListByProgramType(String programType) {
         List<Program> programs = programRepository.findAllByProgramType(programType);
+
+        List<ProgramListResponse> programListResponses = programs.stream()
+                .map(program -> new ProgramListResponse(
+                        program.getId(),
+                        program.getTitle(),
+                        formatToLocalDate(program.getRegisterAt()),
+                        program.getImageUrl(),
+                        program.getStatus().getValue(),
+                        program.getRegion()
+                ))
+                .collect(Collectors.toList());
+        return programListResponses;
+    }
+
+    public List<ProgramListResponse> getStatusDoneProgramList() {
+        List<Program> programs = programRepository.findAllByStatus(Status.DONE);
 
         List<ProgramListResponse> programListResponses = programs.stream()
                 .map(program -> new ProgramListResponse(
