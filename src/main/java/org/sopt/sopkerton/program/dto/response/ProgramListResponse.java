@@ -10,7 +10,8 @@ public record ProgramListResponse(
         String registerAt,
         String imageUrl,
         String status,
-        String Region
+        String Region,
+        String type
 ) {
 
 }

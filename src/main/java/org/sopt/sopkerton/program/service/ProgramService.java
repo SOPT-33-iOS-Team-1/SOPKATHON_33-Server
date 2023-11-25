@@ -36,7 +36,8 @@ public class ProgramService {
                         formatToLocalDate(program.getRegisterAt()),
                         program.getImageUrl(),
                         program.getStatus().getValue(),
-                        program.getRegion()
+                        program.getRegion(),
+                        program.getType()
                 ))
                 .collect(Collectors.toList());
         return programListResponses;
@@ -52,7 +53,8 @@ public class ProgramService {
                         formatToLocalDate(program.getRegisterAt()),
                         program.getImageUrl(),
                         program.getStatus().getValue(),
-                        program.getRegion()
+                        program.getRegion(),
+                        program.getType()
                 ))
                 .collect(Collectors.toList());
         return programListResponses;
@@ -70,7 +72,8 @@ public class ProgramService {
                     program.getOrganizationName(),
                     formatToLocalDate(program.getRegisterAt()),
                     program.getVolunteerHours(),
-                    isApply
+                    isApply,
+                    program.getType()
             );
         }
         if (program.getType().equals(EMPLOYMENT_TYPE)){
@@ -80,7 +83,8 @@ public class ProgramService {
                     program.getOrganizationName(),
                     formatToLocalDate(program.getRegisterAt()),
                     program.getSalary(),
-                    isApply
+                    isApply,
+                    program.getType()
             );
         }
         return null;

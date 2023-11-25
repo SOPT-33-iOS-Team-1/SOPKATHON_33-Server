@@ -16,7 +16,9 @@ public abstract class ProgramDetailResponse {
             @JsonProperty("hour")
             int hour,
             @JsonProperty("isApply")
-            boolean isApply
+            boolean isApply,
+            @JsonProperty("programType")
+            String type
     ) {
     }
 
@@ -32,7 +34,9 @@ public abstract class ProgramDetailResponse {
             @JsonProperty("salary")
             int salary,
             @JsonProperty("isApply")
-            boolean isApply
+            boolean isApply,
+            @JsonProperty("programType")
+            String type
     ) {
     }
 }
