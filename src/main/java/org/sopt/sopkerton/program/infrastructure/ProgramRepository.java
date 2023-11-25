@@ -1,6 +1,7 @@
 package org.sopt.sopkerton.program.infrastructure;
 
 import java.util.List;
+
 import org.sopt.sopkerton.program.domain.Program;
 import org.sopt.sopkerton.program.domain.Status;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,4 +14,5 @@ public interface ProgramRepository extends JpaRepository<Program, Long> {
     List<Program> findAllByProgramType(@Param("type")String programType);
 
     List<Program> findAllByStatus(Status status);
+
 }
