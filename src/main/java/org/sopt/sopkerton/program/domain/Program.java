@@ -33,9 +33,8 @@ public abstract class Program extends BaseEntity {
     @Column(nullable = false)
     private String title;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Category category;
+    private String imageUrl;
+    private String type;
 
     @Column(nullable = false)
     private String organizationName;

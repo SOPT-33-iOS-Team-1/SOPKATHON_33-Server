@@ -8,6 +8,7 @@ public record ProgramListResponse(
         long programId,
         String title,
         String registerAt,
+        String imageUrl,
         String Region
 ) {
 

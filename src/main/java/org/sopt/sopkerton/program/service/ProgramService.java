@@ -16,14 +16,14 @@ public class ProgramService {
     private final ProgramRepository programRepository;
 
     public List<ProgramListResponse> getProgramListByProgramType(String programType) {
-        List<Program> programs = programRepository.findByProgramType(programType);
+        List<Program> programs = programRepository.findAllByProgramType(programType);
 
-        // Program 엔티티를 ProgramListView로 변환
         List<ProgramListResponse> programListResponses = programs.stream()
                 .map(program -> new ProgramListResponse(
                         program.getId(),
                         program.getTitle(),
                         formatToLocalDate(program.getRegisterAt()),
+                        program.getImageUrl(),
                         program.getRegion()
                 ))
                 .collect(Collectors.toList());
@@ -31,7 +31,7 @@ public class ProgramService {
     }
 
     private String formatToLocalDate(LocalDateTime localDateTime) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM.dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM월 dd일");
         return localDateTime.format(formatter);
     }
 
