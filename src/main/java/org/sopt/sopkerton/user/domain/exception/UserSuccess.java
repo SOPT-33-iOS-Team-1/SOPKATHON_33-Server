@@ -6,7 +6,8 @@ import org.springframework.http.HttpStatus;
 
 @AllArgsConstructor
 public enum UserSuccess implements SuccessBase {
-    USER_MAIN_VIEW_SUCCESS(HttpStatus.OK, "Get User Main View Data Successful.")
+    USER_MAIN_VIEW_SUCCESS(HttpStatus.OK, "Get User Main View Data Successful."),
+    USER_DETAIL_VIEW_SUCCESS(HttpStatus.OK, "Get User Detail View Data Successful.") ,
     ;
 
     private final HttpStatus status;
