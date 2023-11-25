@@ -4,6 +4,7 @@ import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.sopt.sopkerton.program.domain.exception.ProgramSuccess;
 import org.sopt.sopkerton.common.response.ApiResponse;
+import org.sopt.sopkerton.program.dto.response.ProgramDetailResponse;
 import org.sopt.sopkerton.program.dto.response.ProgramListResponse;
 import org.sopt.sopkerton.program.service.ProgramService;
 import org.springframework.http.ResponseEntity;
@@ -39,10 +40,10 @@ public class ProgramController {
     }
 
     @GetMapping("/detail")
-    public ResponseEntity<ApiResponse> orderProgramDetail(
+    public ResponseEntity<ApiResponse<ProgramDetailResponse>> orderProgramDetail(
             @RequestParam("programId") Long programId
     ) {
-        Object programDetail = programService.getProgramDetail(1L, programId);
+        ProgramDetailResponse programDetail = programService.getProgramDetail(1L, programId);
         return ResponseEntity
                 .status(ProgramSuccess.PROGRAM_DETAIL_VIEW_SUCCESS.getHttpStatus())
                 .body(
