@@ -2,7 +2,7 @@ package org.sopt.sopkerton.user.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.sopt.sopkerton.common.response.ApiResponse;
-import org.sopt.sopkerton.user.domain.exception.user.UserSuccess;
+import org.sopt.sopkerton.user.domain.exception.UserSuccess;
 import org.sopt.sopkerton.user.dto.response.DetailView;
 import org.sopt.sopkerton.user.dto.response.MainView;
 import org.sopt.sopkerton.user.service.UserService;
