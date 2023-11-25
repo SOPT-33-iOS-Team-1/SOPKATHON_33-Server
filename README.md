@@ -1,2 +1,142 @@
-# SOPKATHON_33-Server
-Repository for Server
+# SOPKATHON-33-Server
+
+> 33th DO SOPT SOPKATHON :: **re:ing** <br>
+>
+> 33기 솝커톤 iOS 1조 프로젝트
+
+<br>
+
+## 🌼 서비스 소개
+
+---
+### 🔥 이름
+#### re:ing ( 다시 일상으로, 함께 걸어가는 길 )
+
+### 🔥 소개
+범죄 이력이 있는 출소자라면, 갱생되지 못할 것이라는 당연한 사회적 인식 속에서 우리는 그들을 사회에서 함께 교화될 수 없는 존재로 단정짓는 관념을 가지고 있다.<br/>
+이러한 사회적 낙인은 범죄자들이 방치되며 재범으로 이어지는 악순환을 반복시킨다. <br/>
+따라서 우리는 이들의 변화 의지를 일으켜 일상을 회복하도록 돕고, 더 나은 사회를 만드는 것에 이바지하려 한다.
+
+<br/>
+
+## 📌 Tech Stacks
+
+---
+- **Language** : Java (jdk-17)
+
+
+- **Web application Framework** : Spring boot (3.2.0), Spring Data JPA
+
+
+- **DataBase** : MySql (8.1.0)
+
+
+- **Cloud/Infra** : Aws EC2, RDS, code deploy
+
+
+- **web server** : Tomcat
+
+
+- **Collaborative Tool** : Github
+
+
+- **Version Control** : Git
+
+
+<br/>
+
+
+## 🖤  Developers
+
+---
+| 정동규 | 김승환 |
+|:----:|:----:|
+| <img width="300" alt="image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/86935274/aa6b8ba8-f49c-45ad-bffd-69faa6703ca1"> | <img width="300" height="330" alt="image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/86935274/b1308faa-06cb-4818-878e-aeb8e17ac14c">| 
+| [yummygyudon](https://github.com/yummygyudon) | [kseysh](https://github.com/kseysh) |
+
+<br/>
+
+## 🙋🏻‍♀️ 역할 분담
+
+---
+<div markdown="1">  
+ 
+  - `승환🤖` & `동규🍣`
+  
+| 기능명 | 담당자 | 완료 여부 |
+| :-----: | :---: | :---: |
+| 프로젝트 세팅 | `승환🤖` | 완료 |
+| EC2 세팅 | `승환🤖` | 완료 |
+| RDS 세팅 | `승환🤖` | 완료 |
+| CI/CD 세팅 | `동규🍣` | 완료 |
+| README 작성 | `동규🍣` | 완료 |
+| DB 설계 | `승환🤖` `동규🍣` | 진행 중 |
+| API 명세서 작성 | `승환🤖` `동규🍣` | 진행 예정 |
+| API 개발 | `승환🤖` `동규🍣` | 진행 예정 |
+
+</div>
+
+
+### ⭐️ 우리 사랑하기로 했어요 ⭐️
+(Comming Soon....) <br/>
+<img width="550" height="400" alt="team_image" src="">
+
+
+<br/>
+
+## ✅ Convention
+
+---
+### 🚀 Coding Convention
+- [💻 코드 컨벤션](https://www.notion.so/Code-Convention-0616e03e9385444eaec6a446d3d6a757?pvs=4)
+
+<br>
+
+### 🚀 Branch Strategy
+- [💻 브랜치 전략](https://www.notion.so/Branch-Strategy-19f824ec44124f478f38bed58ae517a2?pvs=4)
+
+<br/>
+
+## 💾 ERD
+
+---
+> 자세한 테이블 정보는 다음 노션 페이지에 정리해둘 예정입니다! (Comming Soon...)
+- [📝 Database](Comming Soon...)
+
+<img width="884" alt="erd_image" src="">
+
+<br>
+
+## 🖇 Api 명세서
+
+---
+> 작성 중
+
+[🍀 API 명세서](https://www.notion.so/342f6504080f4113afb4a89af506c2d7?v=a36becbc1f0f4239a802053bf782195c&pvs=4)
+
+<br>
+
+## ⚙️ Architecture
+
+---
+<img width="884" alt="architecture_image" src="">
+
+<br>
+
+## 🗂️ Project Foldering
+
+- **도메인 별로 Architecture를 나눌 예정입니다.**
+```
+```
+
+<br>
+
+## ♻️ 실행 방법
+
+---
+
+
+<br/>
+
+
+
