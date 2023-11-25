@@ -1,13 +1,12 @@
-package org.sopt.sopkerton.user.domain.exception;
+package org.sopt.sopkerton.user.domain.exception.apply;
 
 import lombok.AllArgsConstructor;
 import org.sopt.sopkerton.common.exception.base.SuccessBase;
 import org.springframework.http.HttpStatus;
 
 @AllArgsConstructor
-public enum UserSuccess implements SuccessBase {
-    USER_MAIN_VIEW_SUCCESS(HttpStatus.OK, "Get User Main View Data Successful."),
-    USER_DETAIL_VIEW_SUCCESS(HttpStatus.OK, "Get User Detail View Data Successful.") ,
+public enum ApplySuccess implements SuccessBase {
+
     ;
 
     private final HttpStatus status;

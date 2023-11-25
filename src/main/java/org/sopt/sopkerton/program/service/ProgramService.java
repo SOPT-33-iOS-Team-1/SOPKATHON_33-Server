@@ -14,6 +14,8 @@ import org.sopt.sopkerton.program.dto.response.ProgramListResponse;
 import org.sopt.sopkerton.program.infrastructure.ProgramRepository;
 import org.sopt.sopkerton.user.domain.Apply;
 import org.sopt.sopkerton.user.domain.enums.ApplyStatus;
+import org.sopt.sopkerton.user.domain.exception.apply.ApplyError;
+import org.sopt.sopkerton.user.domain.exception.apply.ApplyException;
 import org.sopt.sopkerton.user.infrastructure.ApplyRepository;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +31,7 @@ public class ProgramService {
     public List<ProgramListResponse> getProgramListByProgramType(String programType) {
         List<Program> programs = programRepository.findAllByProgramType(programType);
 
-        List<ProgramListResponse> programListResponses = programs.stream()
+        return programs.stream()
                 .map(program -> new ProgramListResponse(
                         program.getId(),
                         program.getTitle(),
@@ -40,13 +42,12 @@ public class ProgramService {
                         program.getType()
                 ))
                 .collect(Collectors.toList());
-        return programListResponses;
     }
 
     public List<ProgramListResponse> getStatusDoneProgramList() {
         List<Program> programs = programRepository.findAllByStatus(Status.DONE);
 
-        List<ProgramListResponse> programListResponses = programs.stream()
+        return programs.stream()
                 .map(program -> new ProgramListResponse(
                         program.getId(),
                         program.getTitle(),
@@ -57,13 +58,13 @@ public class ProgramService {
                         program.getType()
                 ))
                 .collect(Collectors.toList());
-        return programListResponses;
     }
 
     public Object getProgramDetail(Long userId, Long programId) {
         Program program = programRepository.findById(programId)
                 .orElseThrow(() -> new ProgramException(ProgramError.PROGRAM_NOT_FOUND));
-        Apply apply = applyRepository.findByUserIdAndProgramId(userId, programId).get();
+        Apply apply = applyRepository.findByUserIdAndProgramId(userId, programId)
+                .orElseThrow(() -> new ApplyException(ApplyError.APPLY_NOT_FOUND));
         boolean isApply = convertToIsApply(apply.getIsApply());
         if (program.getType().equals(VOLUNTEER_TYPE)) {
             return new ProgramDetailResponse.VolunteerDetail(

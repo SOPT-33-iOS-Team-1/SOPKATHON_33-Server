@@ -1,4 +1,4 @@
-package org.sopt.sopkerton.user.domain.exception;
+package org.sopt.sopkerton.user.domain.exception.user;
 
 import org.sopt.sopkerton.common.exception.base.ExceptionBase;
 
