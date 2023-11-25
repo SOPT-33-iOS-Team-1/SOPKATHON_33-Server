@@ -20,21 +20,23 @@ import org.sopt.sopkerton.common.domain.BaseEntity;
 @Getter
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn
+@DiscriminatorColumn(name = "program_type")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "programs")
 public abstract class Program extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "program_id")
     private Long id;
 
     @Column(nullable = false)
     private String title;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Category category;
+    private String imageUrl;
+    private String type;
+    @Enumerated(value = EnumType.STRING)
+    private Status status;
 
     @Column(nullable = false)
     private String organizationName;
