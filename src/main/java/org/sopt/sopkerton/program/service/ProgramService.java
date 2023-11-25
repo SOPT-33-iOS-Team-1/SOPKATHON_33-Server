@@ -24,6 +24,7 @@ public class ProgramService {
                         program.getTitle(),
                         formatToLocalDate(program.getRegisterAt()),
                         program.getImageUrl(),
+                        program.getStatus().getValue(),
                         program.getRegion()
                 ))
                 .collect(Collectors.toList());

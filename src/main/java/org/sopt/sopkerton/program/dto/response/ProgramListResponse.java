@@ -9,6 +9,7 @@ public record ProgramListResponse(
         String title,
         String registerAt,
         String imageUrl,
+        String status,
         String Region
 ) {
 

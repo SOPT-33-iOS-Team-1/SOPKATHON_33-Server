@@ -19,12 +19,10 @@ import org.sopt.sopkerton.common.domain.BaseEntity;
 
 @Getter
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "program_type")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "programs")
-public abstract class Program extends BaseEntity {
+public class Program extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "program_id")
@@ -34,7 +32,9 @@ public abstract class Program extends BaseEntity {
     private String title;
 
     private String imageUrl;
+
     private String type;
+
     @Enumerated(value = EnumType.STRING)
     private Status status;
 
@@ -46,4 +46,7 @@ public abstract class Program extends BaseEntity {
 
     @Column(nullable = false)
     private String content;
+
+    private int volunteerHours;
+    private int salary;
 }

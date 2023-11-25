@@ -7,5 +7,8 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum Status {
-    REGISTER, DONE;
+    REGISTER("지원"),
+    DONE("완료");
+
+    private final String value;
 }
