@@ -3,6 +3,8 @@ package org.sopt.sopkerton.program.dto.response;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record ProgramDetailResponse (
+        @JsonProperty("title")
+        String title,
         @JsonProperty("imageUrl")
         String imageUrl,
         @JsonProperty("content")

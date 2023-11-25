@@ -65,6 +65,7 @@ public class ProgramService {
                 .orElseThrow(() -> new ApplyException(ApplyError.APPLY_NOT_FOUND));
         boolean isApply = convertToIsApply(apply.getIsApply());
         return new ProgramDetailResponse(
+                program.getTitle(),
                 program.getImageUrl(),
                 program.getContent(),
                 program.getOrganizationName(),
