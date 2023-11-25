@@ -1,29 +1,53 @@
 # SOPKATHON-33-Server
 
-> 33th DO SOPT SOPKATHON :: **[서비스명]** <br>
+> 33th DO SOPT SOPKATHON :: **re:ing** <br>
 >
 > 33기 솝커톤 iOS 1조 프로젝트
 
 <br>
 
 ## 🌼 서비스 소개
+
 ---
 ### 🔥 이름
-#### {{}}
+#### re:ing ( 다시 일상으로, 함께 걸어가는 길 )
 
 ### 🔥 소개
-
+범죄 이력이 있는 출소자라면, 갱생되지 못할 것이라는 당연한 사회적 인식 속에서 우리는 그들을 사회에서 함께 교화될 수 없는 존재로 단정짓는 관념을 가지고 있다.<br/>
+이러한 사회적 낙인은 범죄자들이 방치되며 재범으로 이어지는 악순환을 반복시킨다. <br/>
+따라서 우리는 이들의 변화 의지를 일으켜 일상을 회복하도록 돕고, 더 나은 사회를 만드는 것에 이바지하려 한다.
 
 <br/>
 
 ## 📌 Tech Stacks
+
 ---
+- **Language** : Java (jdk-17)
+
+
+- **Web application Framework** : Spring boot (3.2.0), Spring Data JPA
+
+
+- **DataBase** : MySql (8.1.0)
+
+
+- **Cloud/Infra** : Aws EC2, RDS, code deploy
+
+
+- **web server** : Tomcat
+
+
+- **Collaborative Tool** : Github
+
+
+- **Version Control** : Git
 
 
 <br/>
 
 
 ## 🖤  Developers
+
 ---
 | 정동규 | 김승환 |
 |:----:|:----:|
@@ -33,6 +57,7 @@
 <br/>
 
 ## 🙋🏻‍♀️ 역할 분담
+
 ---
 <div markdown="1">  
  
@@ -60,6 +85,7 @@
 <br/>
 
 ## ✅ Convention
+
 ---
 ### 🚀 Coding Convention
 - [💻 코드 컨벤션](https://www.notion.so/Code-Convention-0616e03e9385444eaec6a446d3d6a757?pvs=4)
@@ -72,6 +98,7 @@
 <br/>
 
 ## 💾 ERD
+
 ---
 > 자세한 테이블 정보는 다음 노션 페이지에 정리해둘 예정입니다! (Comming Soon...)
 - [📝 Database](Comming Soon...)
@@ -81,6 +108,7 @@
 <br>
 
 ## 🖇 Api 명세서
+
 ---
 > 작성 중
 
@@ -89,12 +117,14 @@
 <br>
 
 ## ⚙️ Architecture
+
 ---
 <img width="884" alt="architecture_image" src="">
 
 <br>
 
 ## 🗂️ Project Foldering
+
 - **도메인 별로 Architecture를 나눌 예정입니다.**
 ```
 ```
@@ -102,6 +132,7 @@
 <br>
 
 ## ♻️ 실행 방법
+
 ---
 
 
