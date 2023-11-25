@@ -20,7 +20,7 @@ import org.sopt.sopkerton.common.domain.BaseEntity;
 @Getter
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn
+@DiscriminatorColumn(name = "program_type")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "programs")
