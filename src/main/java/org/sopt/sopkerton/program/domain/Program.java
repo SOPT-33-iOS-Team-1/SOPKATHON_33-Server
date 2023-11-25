@@ -27,6 +27,7 @@ import org.sopt.sopkerton.common.domain.BaseEntity;
 public abstract class Program extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "program_id")
     private Long id;
 
     @Column(nullable = false)
