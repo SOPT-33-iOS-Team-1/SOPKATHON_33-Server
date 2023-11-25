@@ -1,5 +1,3 @@
-# SOPKATHON-33-Server
-
 > 33th DO SOPT SOPKATHON :: **re:ing** <br>
 >
 > 33기 솝커톤 iOS 1조 프로젝트
@@ -72,16 +70,15 @@
 | RDS 세팅 | `승환🤖` | 완료 |
 | CI/CD 세팅 | `동규🍣` | 완료 |
 | README 작성 | `동규🍣` | 완료 |
-| DB 설계 | `승환🤖` `동규🍣` | 진행 중 |
-| API 명세서 작성 | `승환🤖` `동규🍣` | 진행 예정 |
-| API 개발 | `승환🤖` `동규🍣` | 진행 예정 |
+| DB 설계 | `승환🤖` `동규🍣` | 완료 |
+| API 명세서 작성 | `승환🤖` `동규🍣` | 완료 |
+| API 개발 | `승환🤖` `동규🍣` | 완료 |
 
 </div>
 
 
 ### ⭐️ 우리 사랑하기로 했어요 ⭐️
-(Comming Soon....) <br/>
-<img width="550" height="400" alt="team_image" src="">
+<img width="550" height="400" alt="team_image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/69035864/9805a4f5-b6f5-40de-9b52-324f2ebfa21f">
 
 
 <br/>
@@ -103,16 +100,13 @@
 
 ---
 > 자세한 테이블 정보는 다음 노션 페이지에 정리해둘 예정입니다! (Comming Soon...)
-- [📝 Database](Comming Soon...)
+- [📝 Database](https://www.notion.so/DB-Schema-Description-d0c91546b233435e908a1a2ab315295b?pvs=4)
 
-<img width="884" alt="erd_image" src="">
+<img width="884" alt="erd" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/69035864/a06f2a66-7e87-4321-b31b-ff450de1553b">
 
 <br>
 
 ## 🖇 Api 명세서
-
----
-> 작성 중
 
 [🍀 API 명세서](https://www.notion.so/342f6504080f4113afb4a89af506c2d7?v=a36becbc1f0f4239a802053bf782195c&pvs=4)
 
@@ -121,24 +115,59 @@
 ## ⚙️ Architecture
 
 ---
-<img width="884" alt="architecture_image" src="">
+<img width="884" alt="architecture_image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/69035864/9572b43a-18e2-4578-b496-2fd54f1dc476">
 
 <br>
 
 ## 🗂️ Project Foldering
 
-- **도메인 별로 Architecture를 나눌 예정입니다.**
 ```
+├── 📁 .github
+│   ├── 📁 ISSUE_TEMPLATE
+|   └── 📁 workflows
+|   └── pull_request_template.md
+│
+├── appspec.yml
+|  
+├── HELP.md
+|
+├── build.gradle
+├── gradlew
+├── gradlew.bat
+|
+├── README.md
+|
+├── 📁 script
+│   ├── start.sh
+│   └── stop.sh
+└── 📁 src
+    └── 📁 main
+        ├── 📁 java
+        │   └── 📁 org
+        │       └── 📁 sopt
+        │           └── 📁 sopkerton
+        │               ├── SopkertonApplication.java
+        │               └── 📁 common
+        │                   ├── 📁 exception
+        │                   │   ├── GlobalError.java
+        │                   │   ├── GlobalException.java
+        │                   │   ├── GlobalSuccess.java
+        │                   │   └── 📁 base
+        │                   │       ├── ErrorBase.java
+        │                   │       ├── ExceptionBase.java
+        │                   │       ├── RootEnum.java
+        │                   │       └── SuccessBase.java
+        │                   └── 📁 response
+        │                       ├── ApiResponse.java
+        │                       └── CommonControllerAdvice.java
+        └── 📁 resources
+            └── application.yml
 ```
 
 <br>
 
 ## ♻️ 실행 방법
-
----
-
-
-<br/>
+clone 받아서 application run하고 localhost:8080으로 api 명세서대로 api를 호출한다.
 
 
 
