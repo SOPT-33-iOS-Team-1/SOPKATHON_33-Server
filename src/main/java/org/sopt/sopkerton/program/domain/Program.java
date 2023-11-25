@@ -35,6 +35,8 @@ public abstract class Program extends BaseEntity {
 
     private String imageUrl;
     private String type;
+    @Enumerated(value = EnumType.STRING)
+    private Status status;
 
     @Column(nullable = false)
     private String organizationName;
