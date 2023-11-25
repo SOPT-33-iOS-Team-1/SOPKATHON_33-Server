@@ -22,8 +22,6 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class ProgramService {
-    private static final String VOLUNTEER_TYPE = "VOLUNTEERING";
-    private static final String EMPLOYMENT_TYPE = "EMPLOYMENT";
 
     private final ProgramRepository programRepository;
     private final ApplyRepository applyRepository;
@@ -60,35 +58,22 @@ public class ProgramService {
                 .collect(Collectors.toList());
     }
 
-    public Object getProgramDetail(Long userId, Long programId) {
+    public ProgramDetailResponse getProgramDetail(Long userId, Long programId) {
         Program program = programRepository.findById(programId)
                 .orElseThrow(() -> new ProgramException(ProgramError.PROGRAM_NOT_FOUND));
         Apply apply = applyRepository.findByUserIdAndProgramId(userId, programId)
                 .orElseThrow(() -> new ApplyException(ApplyError.APPLY_NOT_FOUND));
         boolean isApply = convertToIsApply(apply.getIsApply());
-        if (program.getType().equals(VOLUNTEER_TYPE)) {
-            return new ProgramDetailResponse.VolunteerDetail(
-                    program.getImageUrl(),
-                    program.getContent(),
-                    program.getOrganizationName(),
-                    formatToLocalDate(program.getRegisterAt()),
-                    program.getVolunteerHours(),
-                    isApply,
-                    program.getType()
-            );
-        }
-        if (program.getType().equals(EMPLOYMENT_TYPE)){
-            return new ProgramDetailResponse.EmploymentDetail(
-                    program.getImageUrl(),
-                    program.getContent(),
-                    program.getOrganizationName(),
-                    formatToLocalDate(program.getRegisterAt()),
-                    program.getSalary(),
-                    isApply,
-                    program.getType()
-            );
-        }
-        return null;
+        return new ProgramDetailResponse(
+                program.getImageUrl(),
+                program.getContent(),
+                program.getOrganizationName(),
+                formatToLocalDate(program.getRegisterAt()),
+                program.getVolunteerHours(),
+                program.getSalary(),
+                isApply,
+                program.getType()
+        );
     }
 
     private String formatToLocalDate(LocalDateTime localDateTime) {
