@@ -1,6 +1,5 @@
 package org.sopt.sopkerton.common.domain;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
@@ -14,10 +13,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 public class BaseEntity {
     @CreatedDate
-    @Column(name = "register_at")
     private LocalDateTime registerAt;
 
     @LastModifiedDate
-    @Column(name = "done_at")
     private LocalDateTime doneAt;
 }
