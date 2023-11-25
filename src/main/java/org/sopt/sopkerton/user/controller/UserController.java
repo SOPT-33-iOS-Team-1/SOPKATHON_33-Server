@@ -3,6 +3,7 @@ package org.sopt.sopkerton.user.controller;
 import lombok.RequiredArgsConstructor;
 import org.sopt.sopkerton.common.response.ApiResponse;
 import org.sopt.sopkerton.user.domain.exception.UserSuccess;
+import org.sopt.sopkerton.user.dto.response.DetailView;
 import org.sopt.sopkerton.user.dto.response.MainView;
 import org.sopt.sopkerton.user.service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +28,18 @@ public class UserController {
                 .status(UserSuccess.USER_MAIN_VIEW_SUCCESS.getHttpStatus())
                 .body(
                         ApiResponse.success(UserSuccess.USER_MAIN_VIEW_SUCCESS, mainViewInfo)
+                );
+    }
+
+    @GetMapping("/info/detail/{userId}")
+    public ResponseEntity<ApiResponse<DetailView>> orderDetailView(
+            @PathVariable("userId") Long userId
+    ) {
+        DetailView detailInfo = userService.getDetailInfo(userId);
+        return ResponseEntity
+                .status(UserSuccess.USER_DETAIL_VIEW_SUCCESS.getHttpStatus())
+                .body(
+                        ApiResponse.success(UserSuccess.USER_DETAIL_VIEW_SUCCESS, detailInfo)
                 );
     }
 }
