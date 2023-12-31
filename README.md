@@ -51,7 +51,7 @@
 ---
 | 정동규 | 김승환 |
 |:----:|:----:|
-| <img width="300" alt="image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/86935274/aa6b8ba8-f49c-45ad-bffd-69faa6703ca1"> | <img width="300" height="330" alt="image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/86935274/b1308faa-06cb-4818-878e-aeb8e17ac14c">| 
+| <img width="300" alt="image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/86935274/aa6b8ba8-f49c-45ad-bffd-69faa6703ca1"> | <img width="300" alt="image" src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-Server/assets/86935274/b1308faa-06cb-4818-878e-aeb8e17ac14c">| 
 | [yummygyudon](https://github.com/yummygyudon) | [kseysh](https://github.com/kseysh) |
 
 <br/>
